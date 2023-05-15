@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- heading -->
+
+      <h1 class="appHeading">weather app</h1>
+
+      <!-- tabs -->
+      <div class="tabs-container">
+        <h2 class="tab" data-userWeather>Your Weather</h2>
+        <h2 class="tab" data-searchWeather>Search Weather</h2>
+      </div>
+
+      <div class="weather-container">
+        <!-- search tab -->
+        <form class="searchTab" search-form>
+          <input
+            type="text"
+            placeholder="Search for city..."
+            data-searchInput
+          />
+          <div class="searchTab-btn">
+            <img
+              src="assets/search.png"
+              alt=""
+              width="20px"
+              height="20px"
+              loading="lazy"
+            />
+          </div>
+        </form>
+        <!-- grant Location Access -->
+        <div class="grantAccess-container">
+          <div class="grantAccessImg">
+            <img
+              src="assets/location.png"
+              alt=""
+              width="80px"
+              height="80px"
+              loading="lazy"
+            />
+          </div>
+          <h1>Grant Location Access</h1>
+          <p>Allow Access To Get Weather Information</p>
+          <button grant-access-button>GRANT ACCESS</button>
+        </div>
+
+        <!-- loading tab -->
+        <div class="loading-container">
+          <div>
+            <img src="assets/loading.gif" alt="" width="150px" height="150px" />
+          </div>
+          <p>Loading</p>
+        </div>
+
+        <!-- Page not found tab -->
+
+        <div class="pageNotFound-container">
+          <div>
+            <img
+              src="assets/not-found.png"
+              alt=""
+              width="300px"
+              height="300px"
+              loading="lazy"
+            />
+          </div>
+          <h4 api-error></h4>
+        </div>
+
+        <!-- weather tab -->
+        <div class="user-info-container">
+          <div class="loc-name">
+            <h2 city-Name></h2>
+            <img src="" alt="" country-flag />
+          </div>
+          <h3 weather-desc></h3>
+          <img src="" alt="" weather-img />
+          <div data-temp></div>
+          <!-- cards for weather report -->
+          <div class="cards">
+            <div class="card">
+              <div><img src="assets/wind.png" alt="" /></div>
+              <h2 class="cardText">WINDSPEED</h2>
+              <h2 class="cardText" data-wind></h2>
+            </div>
+            <div class="card">
+              <div><img src="assets/humidity.png" alt="" /></div>
+              <h2 class="cardText">HUMIDITY</h2>
+              <h2 class="cardText" data-humidity></h2>
+            </div>
+            <div class="card">
+              <div><img src="assets/cloud.png" alt="" /></div>
+              <h2 class="cardText">CLOUDS</h2>
+              <h2 class="cardText" data-clouds></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: 'Merriweather Sans', sans-serif; 
+}
+
+/* body{
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+} */
+
+#wrapper{
+    max-width: 100vw;
+    min-height: 100vh;
+    color: #F9F7F7;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    
+}
+
+.appHeading{
+    padding-top: 20px;
+    text-align: center;
+    padding-block: 2rem;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 1.75px;
+}
+
+.tabs-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+     margin-top: 4rem;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+    font-weight: 400;
+}
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.weather-container{
+    padding-block:4rem;
+}
+
+.grantAccessImg{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+
+
+.grantAccess-container{
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    scale: 1;
+}
+
+.grantAccess-container.active{
+    display:flex;
+}
+
+.grantAccess-container h1{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grantAccess-container p{
+    font-size:0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+
+.grantAccess-container button{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #3F72AF;
+    cursor: pointer;
+    padding: 10px 30px;
+    width: 10%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.loading-container{
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-container p{
+    text-transform: uppercase;
+}
+
+.user-info-container{
+    display:none;
+}
+
+.user-info-container.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loc-name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.user-info-container h3{
+    font-size:1.5rem;
+    font-weight:200;
+}
+
+.user-info-container img{
+    width:90px;
+    height:90px;
+}
+
+.loc-name h2{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.loc-name img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.user-info-container div[data-temp]{
+    font-size:2.75rem;
+    font-weight:700;
+}
+
+.cards{
+    width: 90%;
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.card{
+      width:30%;
+    max-width:200px;
+    background-color: rgba(219, 226, 239, 0.5);;
+    border-radius: 5px;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:5px 0;
+    align-items: center; 
+}
+
+.card img{
+    width: 50px;
+    height: 50px;
+}
+
+.card h2{
+    font-size: 1.5rem;
+    font-weight:200;
+    text-transform: uppercase;
+}
+
+.searchTab{
+    width: 90%;
+    display: none;
+    max-width: 550px;
+    margin:0 auto;
+    justify-content: center;
+    gap: 0 10px; 
+    margin-bottom: 3rem;
+}
+
+.searchTab.active{
+    display: flex;
+}
+
+.searchTab input{
+    all:unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+
+.searchTab input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.searchTab input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.searchTab-btn{
+     padding:unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom:1px;
+    background-color: #3F72AF;
+}
+
+.pageNotFound-container{
+    display: none;
+}
+
+.pageNotFound-container.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageNotFound-container h4{
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width : 750px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .tab{
+        font-size: 0.75rem;
+    }
+    .appHeading{
+        font-size: 1.75rem;
+    }
+    .card{
+        width: 100%;
+    }
+} 
+
+
+
